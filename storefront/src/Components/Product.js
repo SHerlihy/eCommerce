@@ -1,22 +1,17 @@
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import Product from "./Components/Product";
+import React from "react";
+import StarBar from "./StarBar";
 
-function App() {
+const Product = (props) => {
   return (
-    <>
-      <Header />
-      <Footer />
-      <Product
-        img={"/images/airpods.jpg"}
-        name={"Airpods"}
-        price={99.99}
-        rating={4}
-        numReviews={23}
-      />
-    </>
+    <div className="product-card">
+      <img href={props.img} />
+      <h3>{props.name}</h3>
+      <h3>{props.price}</h3>
+      <StarBar rating={props.rating} numReviews={props.numReviews} />
+      <button>See More</button>
+    </div>
   );
-}
+};
 
 // _id: '1',
 // name: 'Airpods Wireless Bluetooth Headphones',
@@ -30,4 +25,4 @@ function App() {
 // rating: 4.5,
 // numReviews: 12,
 
-export default App;
+export default Product;

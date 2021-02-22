@@ -24,3 +24,17 @@
 .nav__btns > * {
   padding: 1rem;
 }
+
+.starbar {
+  display: flex;
+}
+
+.product-card {
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+}
+
+/* position: absolute;
+top: 20vh;
+left: 20vw; */
