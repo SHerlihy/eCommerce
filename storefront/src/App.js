@@ -1,19 +1,13 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Product from "./Components/Product";
+import ProductListing from "./Components/ProductListing";
 
 function App() {
   return (
     <>
       <Header />
       <Footer />
-      <Product
-        img={"/images/airpods.jpg"}
-        name={"Airpods"}
-        price={99.99}
-        rating={4}
-        numReviews={23}
-      />
+      <ProductListing />
     </>
   );
 }

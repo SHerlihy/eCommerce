@@ -4,7 +4,7 @@ import StarBar from "./StarBar";
 const Product = (props) => {
   return (
     <div className="product-card">
-      <img href={props.img} />
+      <img src={props.img} />
       <h3>{props.name}</h3>
       <h3>{props.price}</h3>
       <StarBar rating={props.rating} numReviews={props.numReviews} />
