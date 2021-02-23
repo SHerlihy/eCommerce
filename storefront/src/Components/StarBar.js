@@ -6,8 +6,12 @@ const StarBar = (props) => {
 
     const stars = [];
 
-    for (let i = 0; i < count; i++) {
-      stars.push(<p>*</p>);
+    for (let i = 0; i < count; i = i + 2) {
+      stars.push(<i className="fas fa-star"></i>);
+    }
+
+    if (count % 2 !== 0) {
+      stars.push(<i className="fas fa-star-half-alt"></i>);
     }
 
     return stars;
