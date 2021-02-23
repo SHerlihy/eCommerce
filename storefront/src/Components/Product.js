@@ -1,14 +1,21 @@
 import React from "react";
 import StarBar from "./StarBar";
+import { Link } from "react-router-dom";
 
-const Product = (props) => {
+const Product = ({ product }) => {
   return (
     <div className="product-card">
-      <img src={props.img} />
-      <h3>{props.name}</h3>
-      <h3>{props.price}</h3>
-      <StarBar rating={props.rating} numReviews={props.numReviews} />
-      <button>See More</button>
+      <Link to={`/product/${product._id}`} className="product-image">
+        <img src={product.image} />
+      </Link>
+      <Link to={`/product/${product._id}`} className="product-row">
+        <h3>{product.name}</h3>
+        <h3>{product.price}</h3>
+      </Link>
+      <div className="product-row">
+        <StarBar rating={product.rating} numReviews={product.numReviews} />
+        <button>BUY NOW</button>
+      </div>
     </div>
   );
 };

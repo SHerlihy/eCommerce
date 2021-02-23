@@ -1,18 +1,32 @@
+:root {
+  --background: rgb(80, 80, 80);
+  --navbarBackground: rgb(24, 24, 24);
+  --text: rgb(207, 207, 207);
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .nav {
-  background-color: burlywood;
-  width: 100vw;
-  position: absolute;
+  background-color: var(--navbarBackground);
+  width: 100%;
+  top: 0;
+  position: fixed;
   display: flex;
   flex-wrap: nowrap;
   align-items: baseline;
 }
 
 .nav__brand {
+  color: var(--text);
   margin-left: 1rem;
 }
 
@@ -22,6 +36,7 @@
 }
 
 .nav__btns > * {
+  color: var(--text);
   padding: 1rem;
 }
 
@@ -30,18 +45,29 @@
 }
 
 .product-card {
+  width: 90vw;
+  justify-self: center;
 }
 
-.product-card > img {
-  width: 10vw;
-  height: 10vh;
+.product {
+  margin-top: 10vh;
+}
+
+.product-image > img {
+  width: 100%;
 }
 
 .product-listings {
   margin-top: 10vh;
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: auto auto;
+  grid-template-columns: 100%;
+}
+
+.product-row {
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
 }
 
 /* position: absolute;

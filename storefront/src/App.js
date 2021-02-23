@@ -1,14 +1,17 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import ProductListing from "./Components/ProductListing";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import HomeScreen from "./Components/Screens/HomeScreen";
+import ProductScreen from "./Components/Screens/ProductScreen";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
+      <Route path="/" component={HomeScreen} exact />
+      <Route path="/product/:id" component={ProductScreen} />
       <Footer />
-      <ProductListing />
-    </>
+    </Router>
   );
 }
 
