@@ -4,21 +4,19 @@ import products from "../products";
 
 const ProductListing = () => {
   return (
-    <div>
-      <main className="product-listings">
-        {products.map((e) => {
-          return (
-            <Product
-              name={e.name}
-              img={e.image}
-              price={e.price}
-              rating={e.rating}
-              numReviews={e.numReviews}
-            />
-          );
-        })}
-      </main>
-    </div>
+    <main className="product-listings">
+      {products.map((e) => {
+        return (
+          <Product
+            name={e.name}
+            img={e.image}
+            price={e.price}
+            rating={e.rating}
+            numReviews={e.numReviews}
+          />
+        );
+      })}
+    </main>
   );
 };
 
