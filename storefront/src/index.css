@@ -15,6 +15,16 @@ body {
   color: var(--text);
 }
 
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+}
+
 .nav {
   background-color: var(--navbarBackground);
   width: 100%;
@@ -73,3 +83,8 @@ body {
 /* position: absolute;
 top: 20vh;
 left: 20vw; */
+
+.product__heading {
+  display: flex;
+  justify-content: space-between;
+}
